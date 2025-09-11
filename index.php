@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XI RPL 2</title>
     <!-- style tailwindcss -->
-    
 
 
 </head>
@@ -26,43 +25,6 @@
         <input type="text" name="alamat">
         <input type="submit" value="Kirim">
     </form>
-
-    <!-- tampilkan data dari database -->
-
-    <?php
-    // query untuk mendapatkan data dari database
-    $sql = "SELECT * FROM tbsiswa";
-    $result = mysqli_query($koneksi, $sql);
-    ?>
-
-    <?php
-    if (mysqli_num_rows($result) > 0): ?>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Nama</th>
-                    <th>Kelas</th>
-                    <th>Alamat</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while ($row = mysqli_fetch_assoc($result)): ?>
-                    <tr>
-                        <td><?= htmlspecialchars($row['nama']); ?></td>
-                        <td><?= htmlspecialchars($row['kelas']); ?></td>
-                        <td><?= htmlspecialchars($row['alamat']); ?></td>
-                    </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
-
-    <?php else: ?>
-
-        <p>Data tidak ditemukan</p>
-
-    <?php endif; ?>
-
 
 </body>
 

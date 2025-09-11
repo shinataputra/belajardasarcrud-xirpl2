@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($koneksi);
 
     // Redirect ke halaman index.php
-    header("Location: index.php");
+    header("Location: view-data.php");
     exit();
 }
 ?>
