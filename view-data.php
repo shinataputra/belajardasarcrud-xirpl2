@@ -34,6 +34,7 @@
                             <th>Nama</th>
                             <th>Kelas</th>
                             <th>Alamat</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,6 +43,10 @@
                                 <td><?= htmlspecialchars($row['nama']); ?></td>
                                 <td><?= htmlspecialchars($row['kelas']); ?></td>
                                 <td><?= htmlspecialchars($row['alamat']); ?></td>
+                                <!-- tombol hapus data tanpa konfirmasi -->
+                                <td>
+                                    <a href="hapus.php?id=<?= urlencode($row['id']); ?>">Hapus</a>
+                                </td>
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
